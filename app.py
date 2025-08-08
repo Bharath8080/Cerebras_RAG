@@ -188,7 +188,7 @@ if prompt := st.chat_input("What's up?"):
             # Add response time with colored text
             response_time_html = f"""
             <div style='margin-top: 10px; color: #28fa07; font-size: 0.9em;'>
-                Response time: {response_time:.2f} seconds
+                ⚡Response time: {response_time:.2f} seconds
             </div>
             """
             full_response = f"{full_response}{response_time_html}"
