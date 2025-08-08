@@ -5,4 +5,7 @@ llama-index-embeddings-cohere
 python-dotenv
 streamlit
 ipython
-
+llama-index-experimental
+openpyxl
+ipython
+llama-index 
