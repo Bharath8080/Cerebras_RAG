@@ -1,0 +1,8 @@
+llama-index-core
+llama-index-readers-file
+llama-index-llms-cerebras
+llama-index-embeddings-cohere
+python-dotenv
+streamlit
+ipython
+
