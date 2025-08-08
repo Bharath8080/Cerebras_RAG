@@ -43,13 +43,10 @@ def reset_chat():
     gc.collect()
 
 def display_pdf(file):
-    st.markdown("### PDF Preview")
-    base64_pdf = base64.b64encode(file.read()).decode("utf-8")
-    pdf_display = f"""<iframe src="data:application/pdf;base64,{base64_pdf}" width="400" height="100%" type="application/pdf"
-                        style="height:100vh; width:100%"
-                    >
-                    </iframe>"""
-    st.markdown(pdf_display, unsafe_allow_html=True)
+    # Just show file info without preview
+    file_details = {"Filename": file.name, "FileSize": f"{len(file.getvalue()) / 1024:.2f} KB"}
+    st.json(file_details)
+
 # Sidebar logo
 st.sidebar.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cerebras_logo.svg/2560px-Cerebras_logo.svg.png", use_container_width=True)
 with st.sidebar:
@@ -184,13 +181,18 @@ if prompt := st.chat_input("What's up?"):
                 full_response = "".join(response_chunks)
                 message_placeholder.markdown(full_response + "▌")
             
-            # Calculate and display response time
+            # Calculate and display response time with colored text
             end_time = time.time()
             response_time = end_time - start_time
             
-            # Add response time to the message
-            full_response = f"{full_response}\n---\n*Response time: {response_time:.2f} seconds*"
-            message_placeholder.markdown(full_response)
+            # Add response time with colored text
+            response_time_html = f"""
+            <div style='margin-top: 10px; color: #28fa07; font-size: 0.9em;'>
+                Response time: {response_time:.2f} seconds
+            </div>
+            """
+            full_response = f"{full_response}{response_time_html}"
+            message_placeholder.markdown(full_response, unsafe_allow_html=True)
             
         except Exception as e:
             end_time = time.time()
