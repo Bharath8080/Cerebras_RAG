@@ -1,6 +1,6 @@
-llama-index-core==0.11.20
+llama-index-core==0.14.0
 llama-index-readers-file
-llama-index-llms-cerebras==0.1.0
+llama-index-llms-cerebras==0.3.1
 llama-index-embeddings-cohere
 python-dotenv
 streamlit
