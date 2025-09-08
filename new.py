@@ -13,8 +13,7 @@ load_dotenv()
 
 import streamlit as st
 from IPython.display import Markdown, display
-
-from llama_index.core.settings import Settings
+from llama_index.core import Settings
 from llama_index.llms.cerebras import Cerebras
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import PromptTemplate
@@ -173,7 +172,7 @@ def create_pandas_engine(df):
     return query_engine
 
 # Sidebar
-st.sidebar.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFv7810BCN31iB_-zp1CxNi8AXHEXODHSKr7XbiFNZrutzDqzXcJWIVv6TsgUQfwPVaYI&usqp=CAU", width='stretch')
+st.sidebar.image("https://media.licdn.com/dms/image/sync/v2/D5627AQGPYgUnvs_6eQ/articleshare-shrink_800/articleshare-shrink_800/0/1741721433861?e=2147483647&v=beta&t=Zneu0N-DBmN58BaBx8aF1aZZY808Y6VjJ6pxjMNlRB0", width='stretch')
 
 with st.sidebar:
     st.header("📂 Upload Your Data")
