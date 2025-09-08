@@ -9,3 +9,4 @@ llama-index-experimental
 openpyxl
 ipython
 llama-index 
+llama-index-embeddings-huggingface
