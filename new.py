@@ -172,7 +172,7 @@ def create_pandas_engine(df):
     return query_engine
 
 # Sidebar
-st.sidebar.image("https://media.licdn.com/dms/image/sync/v2/D5627AQGPYgUnvs_6eQ/articleshare-shrink_800/articleshare-shrink_800/0/1741721433861?e=2147483647&v=beta&t=Zneu0N-DBmN58BaBx8aF1aZZY808Y6VjJ6pxjMNlRB0", width='stretch')
+st.sidebar.image("https://mms.businesswire.com/media/20240827815278/en/839280/5/Cerebras_logo_in_jpeg_format_for_a_black_background.jpg?download=1", width='stretch')
 
 with st.sidebar:
     st.header("📂 Upload Your Data")
