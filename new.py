@@ -279,7 +279,7 @@ with st.sidebar:
 col1, col2 = st.columns([6, 1])
 
 with col1:
-    st.markdown("<h2 style='color: #1407fa;'> RAG using Cerebras : 🪅 GPT-OSS-120B </h2>", unsafe_allow_html=True)
+    st.markdown("<h3 style='color: #1407fa;'> RAG using Cerebras : 🪅 GPT-OSS-120B </h3>", unsafe_allow_html=True)
 
 with col2:
     st.button("Clear ↺", on_click=reset_chat)
