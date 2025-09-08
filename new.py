@@ -14,7 +14,7 @@ load_dotenv()
 import streamlit as st
 from IPython.display import Markdown, display
 
-from llama_index.core import Settings
+from llama_index.core.settings import Settings
 from llama_index.llms.cerebras import Cerebras
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import PromptTemplate
