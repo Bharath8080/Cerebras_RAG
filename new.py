@@ -310,7 +310,7 @@ if prompt := st.chat_input("Ask me anything about your data..."):
     with st.chat_message("user"):
         st.markdown(prompt)
     
-    # Generate response
+    
     with st.chat_message("assistant"):
         message_placeholder = st.empty()
         full_response = ""
@@ -326,7 +326,7 @@ if prompt := st.chat_input("Ask me anything about your data..."):
                         continue
                     response_chunks.append(chunk)
                     full_response = "".join(response_chunks)
-                    message_placeholder.markdown(full_response + "▌")
+                    message_placeholder.markdown(full_response + " <img src='https://media.tenor.com/HiVVJv-skJcAAAAM/pac-man.gif' width='22' style='vertical-align: middle;'/>",unsafe_allow_html=True)
             
             elif st.session_state.data_type == "PANDAS":
                 # Pandas response
