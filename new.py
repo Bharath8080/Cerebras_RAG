@@ -24,8 +24,8 @@ from llama_index.experimental.query_engine import PandasQueryEngine, PandasInstr
 # Configure page
 st.set_page_config(
     page_title="Enhanced Data Analysis & RAG Chatbot",
-    page_icon="🦙",
-    layout="wide"
+    page_icon="🪅",
+    layout="centered"
 )
 
 # Initialize session state
@@ -279,7 +279,7 @@ with st.sidebar:
 col1, col2 = st.columns([6, 1])
 
 with col1:
-    st.markdown("<h2 style='color: #1407fa;'> RAG using Cerebras : 🦙 GPT-OSS-120B </h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='color: #1407fa;'> RAG using Cerebras : 🪅 GPT-OSS-120B </h2>", unsafe_allow_html=True)
 
 with col2:
     st.button("Clear ↺", on_click=reset_chat)
